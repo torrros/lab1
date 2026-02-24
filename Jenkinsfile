@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('1') {
             steps {
-                sh 'docker rm -f gallant_gagarin || true'
+                sh 'docker rm -f test_1 || true'
             }
         }
         stage('Build nginx/custom') {
