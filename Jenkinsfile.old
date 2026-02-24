@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('1') {
+        stage('Start') {
             steps {
-                sh 'docker rm -f gallant_gagarin || true'
+                echo 'Lab_1: nginx/custom'
             }
         }
         stage('Build nginx/custom') {
@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deploy nginx/custom'){
             steps{
-                sh "docker run -d --name test_1 -p 80:80 nginx/custom:latest"
+                sh "docker run -d -p 80:80 nginx/custom:latest"
             }
         }
     }
