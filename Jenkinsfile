@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Push to Docker Hub') {
             steps {
-                withDockerRegistry([ credentialsId: "torrros", url: "" ]) {
+                withDockerRegistry([ credentialsId: "lab", url: "" ]) {
                     sh "docker push torrros/lab2:latest"
                     sh "docker push torrros/lab2:${env.BUILD_NUMBER}"
                 }
