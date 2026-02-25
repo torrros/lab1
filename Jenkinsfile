@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Delete') {
             steps {
-                sh 'docker rm -f test_1 || trueч'
+                sh 'docker rm -f test_1 || true'
             }
         }
         stage('Build image') {
