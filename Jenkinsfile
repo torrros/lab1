@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Check')
+            steps {
+                echo 'Checking files'
+                sh 'ls -l index.html Dockerfile'
+            }
+        }
         stage('Delete') {
             steps {
                 sh 'docker rm -f test_1 || true'
