@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Check')
+        stage('Check'){
             steps {
                 echo 'Checking files'
                 sh 'ls -l index.html Dockerfile'
