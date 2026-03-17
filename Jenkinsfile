@@ -28,6 +28,7 @@ pipeline {
             steps {
                 echo 'Checking files'
                 sh 'ls -l index.html Dockerfile'
+                sh 'echo -e "\\e[32mGreen\\e[0m"'
             }
         }
         stage('Delete') {
