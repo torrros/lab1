@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    options {
+    ansiColor('xterm')
+    }
 
     parameters {
         string(name: 'COMMENT', defaultValue: 'No comment', description: 'Your comment')        
